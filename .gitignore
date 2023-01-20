@@ -5,6 +5,6 @@
 
 # do not ignore .c files, Makefile and libft.h
 !/*.c
+!/wip/*.c
 !/Makefile
 !/libft.h
-main.c
