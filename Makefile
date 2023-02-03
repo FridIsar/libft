@@ -1,16 +1,4 @@
 #------------------------------------------------------------------------------#
-#                                  GENERICS                                    #
-#------------------------------------------------------------------------------#
-
-# Special variables
-DEFAULT_GOAL: all
-.DELETE_ON_ERROR: $(NAME)
-.PHONY: all bonus clean fclean re
-# 'HIDE = @' will hide all terminal output from Make
-HIDE =
-
-
-#------------------------------------------------------------------------------#
 #                                VARIABLES                                     #
 #------------------------------------------------------------------------------#
 
@@ -20,19 +8,13 @@ CFLAGS	=	-Wall -Werror -Wextra -I. -I./$(INCDIR)
 RM		=	rm -f
 
 # Output file name
-NAME	=	
+NAME	=	libft.a
 
 # Sources are all .c files
-SRCDIR	=	src/
-SRCS	=	$(wildcard $(SRCDIR)*.c) # Wildcard for sources is forbidden by norminette
+SRCS	=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c
 
 # Objects are all .o files
-OBJDIR	=	bin/
-OBJS	=	$(patsubst $(SRCDIR)%.c,$(OBJDIR)%.o,$(SRCS))
-
-# Includes are all .h files
-INCDIR	=	include/
-INC		=	$(wildcard $(INCDIR)*.h)
+OBJS	=	$(patsubst %.c,%.o,$(SRCS)) # Wildcard for sources is forbidden by norminette?
 
 
 #------------------------------------------------------------------------------#
@@ -41,25 +23,23 @@ INC		=	$(wildcard $(INCDIR)*.h)
 
 all: $(NAME)
 
-# Generates output file
-$(NAME): $(OBJS)
-	$(HIDE)$(CC) $(CFLAGS) -o $@ $^
-
 # Compiles sources into objects
-$(OBJS): $(OBJDIR)%.o : $(SRCDIR)%.c $(INC) | $(OBJDIR)
-	$(HIDE)$(CC) $(CFLAGS) -c $< -o $@
+$(OBJS): %.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-# Creates directory for binaries
-$(OBJDIR):
-	$(HIDE)mkdir -p $@
+# Generates .a file
+$(NAME): $(OBJS)
+	ar -rcs $(NAME) $< $@
 
 # Removes objects
 clean:
-	$(HIDE)$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 # Removes objects and executables
 fclean: clean
-	$(HIDE)$(RM) $(NAME)
+	$(RM) $(NAME)
 
 # Removes objects and executables and remakes
 re: fclean all
+
+.PHONY: all bonus clean fclean re
