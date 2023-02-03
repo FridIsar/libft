@@ -17,5 +17,7 @@ int	main(void)
 	printf("strlen should be 0: %i\n", ft_strlen(cc));
 	cc = "coucou";
 	printf("strlen should be 6: %i\n", ft_strlen(cc));
+	ft_memset(cc, 'a', 8);
+	printf("memset should be 'aaaaaaaa' : '%s'", cc); // todo explain bus error
 	return (0);
 }

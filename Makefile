@@ -39,7 +39,12 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
+# Test with main
+test:
+	$(CC) $(CFLAGS) $(SRCS) main.c
+	./a.out
+
 # Removes objects and executables and remakes
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all bonus clean fclean re test

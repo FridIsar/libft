@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/01/20 17:52:32 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/02/03 17:11:39 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_isalnum(int c);
 int	ft_isascii(int c);
 int	ft_isprint(int c);
 int	ft_strlen(char *s);
-
+void	*ft_memset(void *b, int c, int len); // TODO replace by size_t
 #endif // LIBFT_H
