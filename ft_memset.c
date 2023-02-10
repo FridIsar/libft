@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:49 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/02/09 20:01:29 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/02/10 16:59:20 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

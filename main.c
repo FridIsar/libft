@@ -1,6 +1,7 @@
 #include "libft.h"
-#include<stdio.h>
+#include <stdio.h>
 #include <string.h>
+
 
 int	main(void)
 {
@@ -31,12 +32,19 @@ int	main(void)
     ft_bzero(str2 + 13, 8*sizeof(char));
     printf("After ft_bzero():  %s\n", str2);
 
-	const char src[29] = "pilipaloupilou";
+	const char src[29] = "Helloooo!!";
 	char dest[29];
-	strcpy(dest,"Helloooo!!");
-	printf("Before memcpy dest = %s\n", dest);
-	ft_memcpy(dest, src, strlen(src)+1);
-	printf("After memcpy dest = %s\n", dest);
+	strcpy(dest,"pilipaloupilou");
+	printf("Before ft_memmove dest = %s\n", dest);
+	ft_memmove(dest, src, strlen(src)+1);
+	printf("After ft_memmove dest = %s\n", dest);
 
+	char string[] = "Hello there, Venus";
+    char buffer[19];
+    int r;
+    r = ft_strlcpy(buffer,string,10);
+    printf("Copied '%s' into '%s', length %d\n", string,buffer, r);
+	// TODO FIX DIFFERENCE IN LENGTH STRLCPY
+	// TODO TEST STRLCAT WITH REAL
 	return (0);
 }
