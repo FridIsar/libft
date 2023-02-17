@@ -46,7 +46,7 @@ int	main(void)
     printf("Copied '%s' into '%s', length %d\n", string,buffer, r);
 
 	char first[] = "This is ";
-    char last[] = "aewewewewg";
+    char last[] = "Thisais q";
     int r2;
     int size2 = 0;
     char buffer2[size2];
@@ -65,6 +65,28 @@ int	main(void)
 	printf("ft_strchr : %s\n", ft_strchr("cou\0cou", '\0'));
 	printf("ft_strrchr : %s\n", ft_strrchr("co\0ucou", '\0'));
 
-	printf("ft_strncmp ")
+	printf("ft_strncmp : %i, %i\n", ft_strncmp(first, last, 5), strncmp(first, last, 5));
+
+	const char str3[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = ft_memchr(str3, ch, strlen(str3));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+      char str4[15];
+   char str5[15];
+   memcpy(str4, "BBC", 6);
+   memcpy(str5, "BBCDEF", 6);
+   printf("ft_memcmp : %i\n", memcmp(str4, str5, 5));
+
+   const char *largestring = "Foo Bar Baz";
+	const char *smallstring = "Bar";
+	char *ptr;
+
+	ptr = strnstr(largestring, smallstring, 0);
+	printf("ft_strnstr : %s\n", ptr);
+
 	return (0);
 }
