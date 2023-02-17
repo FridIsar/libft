@@ -39,12 +39,30 @@ int	main(void)
 	ft_memmove(dest, src, strlen(src)+1);
 	printf("After ft_memmove dest = %s\n", dest);
 
-	char string[] = "Hello there, Venus";
-    char buffer[19];
+	char string[] = "Hqqqqqqqqello there, Venus";
+    char buffer[12];
     int r;
-    r = ft_strlcpy(buffer,string,10);
+    r = ft_strlcpy(buffer,string,1);
     printf("Copied '%s' into '%s', length %d\n", string,buffer, r);
-	// TODO FIX DIFFERENCE IN LENGTH STRLCPY
-	// TODO TEST STRLCAT WITH REAL
+
+	char first[] = "This is ";
+    char last[] = "aewewewewg";
+    int r2;
+    int size2 = 0;
+    char buffer2[size2];
+    strcpy(buffer2,first);
+    r2 = strlcat(buffer2,last,size2);
+    puts(buffer2);
+    printf("Value returned: %d\n",r2);
+    if( r2 > size2 )
+        puts("String truncated");
+    else
+        puts("String was fully copied");
+
+	printf("ft_toupper : %c\n", ft_toupper('A'));
+	printf("ft_tolower : %c\n", ft_tolower('a'));
+
+	printf("ft_strchr : %s\n", ft_strchr("cou\0cou", '\0'));
+	printf("ft_strrchr : %s\n", ft_strrchr("co\0ucou", '\0'));
 	return (0);
 }

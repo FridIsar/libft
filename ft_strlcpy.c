@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:14:00 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/02/10 17:42:43 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/02/17 14:45:54 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	src_len;
 
+	src_len = ft_strlen(src);
 	i = 0;
 	if (dstsize)
 	{
@@ -26,5 +28,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = 0;
 	}
-	return (i);
+	return (src_len);
 }
