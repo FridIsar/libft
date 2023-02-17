@@ -64,5 +64,7 @@ int	main(void)
 
 	printf("ft_strchr : %s\n", ft_strchr("cou\0cou", '\0'));
 	printf("ft_strrchr : %s\n", ft_strrchr("co\0ucou", '\0'));
+
+	printf("ft_strncmp ")
 	return (0);
 }
