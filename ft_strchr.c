@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:52 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/10 14:08:10 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 15:58:24 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (i <= (int) ft_strlen(s))
-	{
-		if (s[i] == c)
-			return ((char *) &s[i]);
-		i++;
-	}
-	return (NULL);
+	c = c % 256;
+	while (*s != '\0' && c != *s)
+		s++;
+	if (c == *s)
+		return ((char *)s);
+	return (0);
 }

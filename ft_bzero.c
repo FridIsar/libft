@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:19 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/02/10 17:05:44 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 14:47:02 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	buf = s;
 	i = 0;
-	while (buf[i] && i < n)
+	while (i < n)
 	{
 		buf[i] = 0;
 		i++;
