@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:22 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/01/20 17:13:23 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 09:06:41 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	i;
-	void	**ret;
+	char	*ret;
 
-	ret = malloc(count);
-	i = 0;
-	while (i < count)
-	{
-		ret[i] = malloc(size * sizeof (char));
-		ft_memset(ret[i], 0, size);
-		i++;
-	}
+	ret = malloc(count * size);
+	if (!ret)
+		return (NULL);
+	ft_memset(ret, 0, count * size);
 	return (ret);
 }

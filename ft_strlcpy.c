@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:14:00 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/02/17 14:45:54 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 13:45:52 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize)
 	{
-		while (i < dstsize - 1)
+		while (i < dstsize - 1 && i < src_len)
 		{
 			dst[i] = src[i];
 			i++;

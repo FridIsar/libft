@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:25 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/01/20 17:28:29 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 09:22:07 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	int	is_alnum;
+
+	is_alnum = ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return (is_alnum || (c >= '0' && c <= '9'));
 }

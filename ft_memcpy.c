@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:13:44 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/02/10 17:18:03 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/10 13:39:08 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t	i;
-	char	*dst_buf;
-	char	*src_buf;
+	size_t			i;
 
-	dst_buf = (char *)dst;
-	src_buf = (char *)src;
 	i = 0;
-	while ((dst_buf[i] || src_buf[i]) && i < n)
+	if (!dst && !src)
+		return (0);
+	while (i < n)
 	{
-		dst_buf[i] = src_buf[i];
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
 	return (dst);

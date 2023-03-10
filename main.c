@@ -16,9 +16,9 @@ int	main(void)
 	c = ',';
 	printf("is alphanum should be 0: %i\n", ft_isalnum(c));
 	char *cc = "";
-	printf("strlen should be 0: %i\n", ft_strlen(cc));
+	printf("strlen should be 0: %i\n", (int) ft_strlen(cc));
 	cc = "coucou";
-	printf("strlen should be 6: %i\n", ft_strlen(cc));
+	printf("strlen should be 6: %i\n", (int) ft_strlen(cc));
 
 	char str[29] = "42 is for programming geeks.";
     printf("\nBefore memset(): %s\n", str);
@@ -81,6 +81,13 @@ int	main(void)
    memcpy(str5, "BBCDEF", 6);
    printf("ft_memcmp : %i\n", memcmp(str4, str5, 5));
 
+   //char src2[50] = "http://www.tutorialspoint.com";
+   char dest2[50];
+   strcpy(dest2,"Heloooo!!");
+   printf("Before memcpy dest = %s\n", dest2);
+   ft_memmove(dest2+3, dest2, strlen(dest2)+1);
+   printf("After memcpy dest = %s\n", dest2);
+
    const char *largestring = "Foo Bar Baz";
 	const char *smallstring = "Bar";
 	char *ptr;
@@ -93,7 +100,7 @@ int	main(void)
 	char *test2 = ft_strdup("coucou");
 	printf("should be coucou : %s\n", test2);
 
-	const char *tt = "   -2147483648";	
+	const char *tt = "   -2147483648";
 	printf("atoi : %i\n", atoi(tt));
 	printf("ft_atoi : %i\n", ft_atoi(tt));
 	return (0);
