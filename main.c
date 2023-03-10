@@ -88,5 +88,13 @@ int	main(void)
 	ptr = strnstr(largestring, smallstring, 0);
 	printf("ft_strnstr : %s\n", ptr);
 
+	//void *test = calloc(4, 4);
+	printf("ft_calloc should be 0 : %i\n", (((int *)ft_calloc(4, 4))[0]));
+	char *test2 = ft_strdup("coucou");
+	printf("should be coucou : %s\n", test2);
+
+	const char *tt = "   -2147483648";	
+	printf("atoi : %i\n", atoi(tt));
+	printf("ft_atoi : %i\n", ft_atoi(tt));
 	return (0);
 }
