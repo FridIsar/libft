@@ -103,5 +103,10 @@ int	main(void)
 	const char *tt = "   -2147483648";
 	printf("atoi : %i\n", atoi(tt));
 	printf("ft_atoi : %i\n", ft_atoi(tt));
+
+	printf("substr: %s\n", ft_substr("coupoucou", 3, 3));
+
+	printf("strjoin %s\n", ft_strjoin("coucou",  "ca va"));
+	printf("ft_strtrim %s\n", ft_strtrim("coucou",  "cava"));
 	return (0);
 }
