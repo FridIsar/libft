@@ -107,6 +107,9 @@ int	main(void)
 	printf("substr: %s\n", ft_substr("coupoucou", 3, 3));
 
 	printf("strjoin %s\n", ft_strjoin("coucou",  "ca va"));
-	printf("ft_strtrim %s\n", ft_strtrim("coucou",  "cava"));
+	printf("ft_strtrim %s\n", ft_strtrim("   --kj-kj-    ",  "- cava"));
+	char **split = ft_split("coucou ca va va va va", ' ');
+	for (int i = 0; i < 6; i++)
+		printf("%s|\n",split[i]);
 	return (0);
 }

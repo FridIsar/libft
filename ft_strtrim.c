@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:53:35 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/17 13:51:18 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:33:50 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start));
 }
-

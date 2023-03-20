@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:52:36 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/17 13:19:24 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:33:25 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (NULL);
 	ft_memmove(str, s1, s1_len);
-	ft_memmove(str+s1_len, s2, s2_len);
+	ft_memmove(str + s1_len, s2, s2_len);
 	return (str);
 }
