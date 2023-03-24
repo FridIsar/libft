@@ -6,13 +6,39 @@
 /*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:57:55 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/24 15:14:03 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/03/24 16:19:28 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_pow10(int pow)
+{
+	int	n;
+
+	n = 1;
+	while (pow > 0)
+	{
+		n *= 10;
+		pow--;
+	}
+	return (n);
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	unsigned int	un;
+	int				nbd;
+
+	nbd = ft_countdigits(n) - 1;
+	un = ft_abs(n);
+	if (n < 0)
+		write(fd, "-", 1);
+	while (un > 9)
+	{
+		ft_putchar_fd((un / ft_pow10(nbd)) + '0', fd);
+		un %= ft_pow10(nbd);
+		nbd--;
+	}
+	ft_putchar_fd((un / ft_pow10(nbd)) + '0', fd);
 }
