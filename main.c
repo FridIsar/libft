@@ -1,6 +1,7 @@
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <fcntl.h>
 
 
 int	main(void)
@@ -111,5 +112,10 @@ int	main(void)
 	char **split = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
 	for (int i = 0; i < 13; i++)
 		printf("%s|\n",split[i]);
+	printf("cd test: %s\n", ft_itoa(-2147483648));
+
+	int fd = open("not_z", O_WRONLY);
+	printf("fd is %i\n", fd);
+	ft_putnbr_fd(-321312, fd);
 	return (0);
 }

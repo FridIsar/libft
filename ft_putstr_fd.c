@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 12:56:22 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/17 12:56:22 by ifridrik         ###   ########.fr       */
+/*   Created: 2023/03/17 12:56:58 by ifridrik          #+#    #+#             */
+/*   Updated: 2023/03/24 15:04:40 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd)
+{
+	write(fd, s, ft_strlen(s));
+}

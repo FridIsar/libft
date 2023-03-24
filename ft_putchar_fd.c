@@ -1,15 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
+/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 12:58:09 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/17 12:58:09 by ifridrik         ###   ########.fr       */
+/*   Created: 2023/03/17 12:56:22 by ifridrik          #+#    #+#             */
+/*   Updated: 2023/03/24 15:01:47 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

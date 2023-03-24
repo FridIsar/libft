@@ -6,7 +6,7 @@
 /*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/24 14:01:16 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/03/24 14:45:59 by opencultura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 //# include <stdio.h>
 //# include <unistd.h> TODO remove functions not in exo like isspace?
 int		ft_isalpha(int c);
