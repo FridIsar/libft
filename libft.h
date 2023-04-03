@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/04/03 15:31:53 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:10:02 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *h, const char *n, size_t len);
-int				ft_countdigits(int n);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 void			ft_bzero(void *s, size_t n);

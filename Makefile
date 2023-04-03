@@ -6,7 +6,7 @@
 #    By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 15:22:07 by ifridrik          #+#    #+#              #
-#    Updated: 2023/04/03 16:01:07 by ifridrik         ###   ########.fr        #
+#    Updated: 2023/04/03 16:09:56 by ifridrik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,11 @@ SRC =	ft_bzero.c ft_striteri.c			\
 	ft_putendl_fd.c	ft_putnbr_fd.c
 # List of objects created from source files
 OBJ = $(SRC:.c=.o)
-# Name of header file
-INCLUDE = libft.h
+# Target that creates the library $(NAME) using the LIB command
+$(NAME): $(OBJ)
+	$(LIB) $(NAME) $(OBJ)
 # Default target
 all: $(NAME)
-# Target that creates the library $(NAME) using the LIB command
-$(NAME): $(OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJ)
 # Rule for building object files from C source files
 %.o: %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
@@ -57,5 +55,5 @@ fclean: clean
 	$(RM) $(NAME)
 # Rule to rebuild project from scratch
 re: fclean all
-
+# Target to avoid a conflict with a file of the same name
 .PHONY: all clean fclean re
