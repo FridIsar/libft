@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/24 16:16:30 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/04/03 15:07:42 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
-int				ft_isspace(char c);
 size_t			ft_strlen(const char *s);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);

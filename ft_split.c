@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:54:12 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/20 21:46:54 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/04/03 15:23:07 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 int	ft_countwords(char const *s, char c)
 {
@@ -36,6 +35,20 @@ int	ft_countwords(char const *s, char c)
 	return (nb_words);
 }
 
+void	*ft_free(char **arr, int k)
+{
+	int	i;
+
+	i = 0;
+	while (i < k)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		start;
@@ -56,6 +69,8 @@ char	**ft_split(char const *s, char c)
 		while (s[end] != c && s[end])
 			end++;
 		arr[k] = ft_substr(s, start, end - start);
+		if (!arr[k])
+			return (ft_free(arr, k));
 		k++;
 		start = end;
 	}

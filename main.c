@@ -4,6 +4,18 @@
 #include <fcntl.h>
 
 
+void checkLeaks() {
+	system("leaks a.out");
+}
+/*
+int main(void)
+{
+	printf("ft_strtrim2 |%s|\n", ft_strtrim("",  ""));
+	atexit(checkLeaks);
+	return (0);
+}*/
+
+
 int	main(void)
 {
 	char c = 'Z';
@@ -109,6 +121,7 @@ int	main(void)
 
 	printf("strjoin %s\n", ft_strjoin("coucou",  "ca va"));
 	printf("ft_strtrim |%s|\n", ft_strtrim(" loremamet ",  " "));
+	printf("ft_strtrim2 |%s|\n", ft_strtrim("",  ""));
 	char **split = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
 	for (int i = 0; i < 13; i++)
 		printf("%s|\n",split[i]);
@@ -117,5 +130,8 @@ int	main(void)
 	int fd = open("not_z", O_WRONLY);
 	printf("fd is %i\n", fd);
 	ft_putnbr_fd(-2147483648, fd);
+	printf("substr2: %s\n", ft_substr("hola", 2, 3));
+	//atexit(checkLeaks);
 	return (0);
 }
+
