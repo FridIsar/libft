@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:57:55 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/24 16:19:28 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/04/03 15:26:25 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

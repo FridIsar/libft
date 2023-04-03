@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:52:36 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/20 20:12:21 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/04/03 15:26:40 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

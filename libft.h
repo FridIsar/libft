@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/04/03 15:07:42 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/04/03 15:28:52 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-//# include <stdio.h>
-//# include <unistd.h> TODO remove functions not in exo like isspace?
+
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);

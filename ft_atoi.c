@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: openculturalcenter <openculturalcenter@    +#+  +:+       +#+        */
+/*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 17:14:21 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/03/24 15:30:59 by opencultura      ###   ########.fr       */
+/*   Updated: 2023/04/03 15:25:40 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
