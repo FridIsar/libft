@@ -6,7 +6,7 @@
 #    By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 15:22:07 by ifridrik          #+#    #+#              #
-#    Updated: 2023/04/03 15:45:42 by ifridrik         ###   ########.fr        #
+#    Updated: 2023/04/03 16:01:07 by ifridrik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIB = ar rcs
 RM = rm -f
 # C Compiler and flags
 CC = gcc
-CCFLAGS = -Wall -Wextra -Werror -Wnon-literal-null-conversion
+CCFLAGS = -Wall -Wextra -Werror
 # Name of library file
 NAME = libft.a
 # List of C source files
