@@ -6,7 +6,7 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:05:24 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/04/03 15:28:52 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/04/03 15:31:53 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,4 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_itoa(int n);
-unsigned int	ft_abs(int n);
 #endif // LIBFT_H
