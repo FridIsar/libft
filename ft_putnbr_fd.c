@@ -6,64 +6,30 @@
 /*   By: ifridrik <ifridrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:57:55 by ifridrik          #+#    #+#             */
-/*   Updated: 2023/04/03 15:36:31 by ifridrik         ###   ########.fr       */
+/*   Updated: 2023/04/03 15:53:51 by ifridrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countdigit(int n)
-{
-	int				i;
-	unsigned int	un;
-
-	if (n < 0)
-		un = -n;
-	else
-		un = n;
-	i = 1;
-	while (un > 9)
-	{
-		un /= 10;
-		i++;
-	}
-	return (i);
-}
-
-unsigned int	ft_abso(int n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
-int	ft_pow10(int pow)
-{
-	int	n;
-
-	n = 1;
-	while (pow > 0)
-	{
-		n *= 10;
-		pow--;
-	}
-	return (n);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	un;
-	int				nbd;
-
-	nbd = ft_countdigit(n) - 1;
-	un = ft_abso(n);
-	if (n < 0)
-		write(fd, "-", 1);
-	while (un > 9)
+	if (n == -2147483648)
 	{
-		ft_putchar_fd((un / ft_pow10(nbd)) + '0', fd);
-		un %= ft_pow10(nbd);
-		nbd--;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	ft_putchar_fd((un / ft_pow10(nbd)) + '0', fd);
+	else if (n > 9 && n <= 2147483647)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
