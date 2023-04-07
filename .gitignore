@@ -4,8 +4,10 @@
 !.gitignore
 
 # do not ignore .c files, Makefile and libft.h
-!/*.c
+!/src
+!/src/*.c
 !/wip
 !/wip/*.c
 !/Makefile
-!/libft.h
+!/include
+!/include/libft.h
